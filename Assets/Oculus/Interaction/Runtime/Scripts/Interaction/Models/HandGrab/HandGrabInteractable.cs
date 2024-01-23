@@ -133,6 +133,8 @@ namespace Oculus.Interaction.HandGrab
         private GrabPoseFinder _grabPoseFinder;
 
         private static CollisionInteractionRegistry<HandGrabInteractor, HandGrabInteractable> _registry = null;
+        public Action<HandGrabInteractor> WhenHandGrabbed;
+        public Action<HandGrabInteractor> WhenHandReleased;
 
         #region editor events
         protected virtual void Reset()
